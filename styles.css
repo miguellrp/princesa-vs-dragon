@@ -1,0 +1,271 @@
+:root {
+  --background-color: #23272e;
+  --primary-color: #8bb44c;
+  --primary-darken-color: color-mix(in srgb,var(--primary-color),black 45%);
+  --secondary-color: #ffffff20;
+  --dialog-background: #3f4248;
+
+  --high-hp-color: #61faca;
+  --middle-hp-color: #b8f45e;
+  --low-hp-color: #f1862e;
+  --zero-hp-color: #e2433b;
+}
+
+@font-face {
+  font-family: "NineteenNinetySeven";
+  src: url("./assets/fonts/NineteenNinetySeven.ttf");
+}
+
+::selection {
+  color: white;
+  background-color: var(--primary-color);
+}
+
+
+/* HomePage */
+.icon {
+  margin: 0;
+  &:hover {
+    animation: buzz-horizontal .15s 4;
+  }
+}
+
+.versus {
+  display: flex;
+  justify-content: center;
+  margin-top: 25vh;
+  font-size: 5vh;
+
+  & span {
+    font-size: 11vh;
+  
+    &.vida-baja {
+      color: var(--low-hp-color);
+      filter: drop-shadow(2px 2px 10px var(--low-hp-color));
+      }
+  }
+
+  & img {
+    margin: auto 35px;
+    filter: drop-shadow(2px 2px 10px var(--primary-color));
+  }
+
+  & .vs {
+    font-size: 50px;
+  }
+
+  /* custom div versus para página de partida */
+  &.game {
+    display: block;
+    margin-top: 2vh;
+  }
+}
+
+footer {
+  margin-top: 29vh;
+  text-align: center;
+  -webkit-user-select: none;
+  user-select: none;
+
+  & a {
+    color: var(--primary-color);
+    text-decoration: none;
+    &:active {
+      color: var(--primary-darken-color);
+    }
+  }
+}
+
+/* ----------------- */
+
+* {
+  font-family: "NineteenNinetySeven";
+  text-align: center;
+  margin: 15px 5px;
+}
+
+body {
+  background-color: var(--background-color);
+  color: white;
+}
+
+#vida-princesa, #vida-dragon {
+  font-size: 60px;
+}
+
+#notificacion-accion {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px;
+  margin: 50px auto;
+  visibility: hidden;
+  color: orange;
+}
+
+.pociones {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 3px;
+  margin: 30px auto;
+
+  border: 2px dotted var(--primary-color);
+  font-size: 4vh;
+  background-color: var(--secondary-color);
+  
+  & legend {
+    font-size: 20px;
+    color: var(--primary-color);
+    margin-bottom: 0;
+  }
+
+  &.cantidad-pociones {
+    margin: 0 auto;
+  }
+}
+
+input {
+  padding: 10px;
+  border-top: 2px solid var(--primary-color);
+  border-left: 2px solid var(--primary-color);
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+ 
+  &:active {
+    background-color: #ffffff15;
+    color: var(--primary-darken-color);
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-bottom: 2px solid var(--primary-darken-color);
+    border-right: 2px solid var(--primary-darken-color);
+  }
+
+  &:disabled {
+    background-color: #ffffff15;
+    border: 2px solid black;
+    color: black;
+  }
+}
+
+/* Dialog */
+dialog {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 30vh auto;
+  z-index: 3;
+  border: 2px solid var(--primary-color);
+
+  &[open] {
+    animation: show 3s ease normal;
+  }
+
+  & ul {
+    list-style: none;
+    padding: 0px;
+
+    & li:before{
+      content: "✦";
+      color: yellow;
+    }
+  }
+
+  & span {
+    color: yellow;
+  }
+
+  & strong {
+    margin: 0;
+      font-weight: normal;
+      color: white;
+    }
+}
+
+#dialog-info {
+  margin: 2vh auto;
+  width: 75vw;
+  padding: 20px;
+  
+  color: var(--primary-color);
+  background-color: var(--dialog-background);
+
+  &[open] {
+    animation: show .5s ease normal;
+  }
+
+  & #close-btn {
+    opacity: 0.5;
+    display: flex;
+    margin-top: 0;
+    margin-left: auto;
+
+    cursor: pointer;
+    transition: all .3s ease;
+
+    &:hover {
+      opacity: 1;
+      transform: rotate(270deg);
+    }
+  }
+}
+
+/* ----------------- */
+
+/* Animaciones */
+
+@keyframes buzz-horizontal {
+  25% {
+    transform: translateX(-3px);
+  }
+
+  50% {
+    transform: translateX(0);
+  }
+
+  75% {
+    transform: translateX(3px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+
+}
+
+@keyframes show{
+    from {
+        transform: translateY(-30vh);
+    } to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes close {
+  from {
+    transform: translateY(0vh);
+  } to {
+      transform: translateY(-30vh);
+  }
+}
+
+/* Media-queries */
+@media (max-width: 1300px) {
+  dialog {
+    width: 80vw;
+  }
+
+  #dialog-info {
+    width: 75vw;
+    height: 69vh;
+    overflow-y: scroll;
+  }
+}
+
+/* Custom scroll */
+
+::-webkit-scrollbar {
+  background-color: var(--secondary-color);
+  width: 1.5vw;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+}

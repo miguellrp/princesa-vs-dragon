@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>👸 vs 🐲</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <a href="https://github.com/miguellrp" target="_blank" rel="noopener">
+    <img src="assets/images/github-icon.png" class="icon" alt="Logo de Github" />
+  </a>
+  <dialog id="dialog-info">
+    <img id="close-btn" src="assets/images/close-icon.png" alt="Símbolo X (cerrar) contenido en un recuadro">
+    <div class="content-dialog">
+      <p>
+        En este minijuego encarnarás a una <strong>princesa</strong> que lucha por su vida frente a un
+        <strong>dragón</strong>.
+      </p>
+      <p>
+        Todas las <strong>stats</strong> de este juego son <strong>generadas de manera aleatoria</strong> (tanto la vida
+        inicial de los
+        personajes como el daño de sus ataques o el poder de curación de cada poción).
+      </p>
+      <p>Como princesa real, puedes realizar <strong>3 acciones</strong>:</p>
+      <ul>
+        <li> <span>Atacar:</span> No hay mucho que explicar... Atacas al dragón (con un daño de ataque que puede ir de
+          2 a 65 puntos de vida). </li>
+        <li> <span>Buscar poción:</span> En el caso de que no vayas cargada al máximo de pociones (5), tienes
+          un 25% de posibilidades de encontrar una y guardarla en tu zurrón.</li>
+        <li> <span>Tomar poción:</span> En el caso de que tengas pociones, consumes una y restauras una cifra aleatoria
+          (de 2 a 100) puntos de vida. </li>
+      </ul>
+      <p>
+        Después de cada acción, es turno del dragón. Y, bueno... el dragón sólo ataca porque es un dragón y los dragones
+        sólo atacan (o al menos en este reino).
+      </p>
+      <p>
+        Si pierdes... <strong>¡no te frustres!</strong> El motivo de tu derrota ha sido por la desfavorable
+        generación de las stats. Vuelve a intentarlo y <strong>demuéstrale a ese dragón de quién es este reino</strong>.
+      </p>
+    </div>
+  </dialog>
+  <div class="versus">
+    <img src="assets/images/princesa-avatar.png" alt="Busto de princesa animada" height="85" />
+    <span class="vs">vs</span>
+    <img src="assets/images/dragon-avatar.png" alt="Cabeza de dragón animada" height="85" />
+  </div>
+  <input type="button" value="Jugar" onclick="play()">
+  <input type="button" value="Info" onclick="mostrarInfo()">
+  <footer>Animated Emojis by
+    <a href="https://animated-fluent-emoji.vercel.app" target="_blank" rel="noopener">Animated Fluent Emojis</a>
+  </footer>
+</body>
+
+</html>

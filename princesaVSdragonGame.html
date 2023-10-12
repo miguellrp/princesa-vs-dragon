@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>👸 vs 🐲 | En partida</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+
+<body onload="cargarStats()">
+  <dialog id="dialog-final"></dialog>
+  <div class="versus game">
+    <h3><span id="vida-princesa"></span> - <span id="vida-dragon"></span></h3>
+    <span class="avatar" id="princesa">👸</span> vs <span class="avatar" id="dragon">🐲</span>
+  </div>
+  <p id="notificacion-accion"> </p>
+  <fieldset class="pociones">
+    <legend>Pociones</legend>
+    <p id="cantidad-pociones"></p>
+  </fieldset>
+  <input type="button" value="Atacar ⚔️" onclick="atacar()">
+  <input type="button" value="Tomar poción ⚗️" id="tomar-pocion-btn" onclick="tomarPocion()">
+  <input type="button" value="Buscar poción 🔎" id="buscar-btn" onclick="buscarPocion()">
+  <input type="button" id="btn-salir" value="Salir ❎" onclick="exit()">
+</body>
+
+</html>
