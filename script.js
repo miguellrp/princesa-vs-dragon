@@ -39,7 +39,7 @@ function turnoDragon () {
   ]
 
   actualizarHP("princesa", "ataque").then(() => {
-    mostrarNotificacion(`🐉 El dragón te ha quitado ${danhoAtaque} puntos de vida ${ataquesDragon[getNumAleatorio(1, this.length - 1)]}`,
+    mostrarNotificacion(`🐉 El dragón te ha quitado ${danhoAtaque} puntos de vida ${ataquesDragon[getNumAleatorio(0, (ataquesDragon.length - 1))]}`,
       "orangered", delayTimeMS);
 
     setTimeout(() => {
@@ -61,7 +61,7 @@ function atacar () {
   ]
 
   actualizarHP("dragon", "ataque").then(() => {
-    mostrarNotificacion(`🤺 Le has quitado ${danhoAtaque} al dragón ${ataquesPrincesa[getNumAleatorio(1, this.length)]}`,
+    mostrarNotificacion(`🤺 Le has quitado ${danhoAtaque} al dragón ${ataquesPrincesa[getNumAleatorio(0, (ataquesPrincesa.length - 1))]}`,
       "var(--primary-color)", delayTimeMS);
 
     setTimeout(() => {
