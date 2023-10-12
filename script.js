@@ -1,4 +1,5 @@
-console.info("%c¡Hola! ¿Hubo algo que te picase la curiosidad? Coge y copia todo lo que quieras. Todo está hecho con HTML, CSS y JS nativo.",
+console.info("%c¡Hola! ¿Hubo algo que te picase la curiosidad? Coge y copia todo lo que quieras. Todo está hecho con HTML, CSS y JS nativo. " +
+  "Si quieres echar un vistazo al código fuente: https://github.com/miguellrp/princesa-vs-dragon",
   "background-color: #8bb44c; color: black; padding: 10px; border: 1px solid green;");
 
 /* MODAL INFO (HOME) */

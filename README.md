@@ -3,6 +3,10 @@
 _Un sencillo minijuego en donde se encarna a una princesa en una batalla frente a un dragón. Creado con HTML, CSS y JS nativo._
 
 
+## 🪄 Demo
+https://miguellrp.github.io/princesa-vs-dragon/
+
+
 ## 📋 Requisitos
 Los requisitos de este minijuego nacen de una de las tareas realizadas para el módulo de Entorno Cliente (DAW). Como una manera de practicar el manejo del DOM a través de JS nativo, la tarea establece los siguientes requisitos:
 
