@@ -3,8 +3,11 @@
 _Un sencillo minijuego en donde se encarna a una princesa en una batalla frente a un dragón. Creado con HTML, CSS y JS nativo._
 
 
+<img src="assets/screenshots/demo.png" alt="Captura de pantalla del minijuego Princesa VS Dragón" >
+
+
 ## 🪄 Demo
-https://miguellrp.github.io/princesa-vs-dragon/
+https://princesa-vs-dragon.vercel.app
 
 
 ## 📋 Requisitos
