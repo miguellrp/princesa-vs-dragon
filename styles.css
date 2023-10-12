@@ -48,6 +48,7 @@
   & img {
     margin: auto 35px;
     filter: drop-shadow(2px 2px 10px var(--primary-color));
+    animation: breathe 3s linear infinite;
   }
 
   & .vs {
@@ -227,6 +228,24 @@ dialog {
   100% {
     transform: translateX(0);
   }
+}
+
+@keyframes breathe {
+  25% {
+    transform: translateY(4px);
+  }
+  
+  50% {
+    transform: translateY(0)
+  }
+
+  75% {
+    transform: translateY(-4px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 
 }
 
@@ -234,16 +253,8 @@ dialog {
     from {
         transform: translateY(-30vh);
     } to {
-        transform: translateY(0%);
+        transform: translateY(0);
     }
-}
-
-@keyframes close {
-  from {
-    transform: translateY(0vh);
-  } to {
-      transform: translateY(-30vh);
-  }
 }
 
 /* Media-queries */
